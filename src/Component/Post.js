@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class Post extends Component {
   constructor() {
@@ -9,9 +10,11 @@ class Post extends Component {
   }
 
   componentWillMount() {
-    this.getItems();
+    //this.getItems();
+    this.getItemDetails();
   }
 
+  //Using Fetch
   getItems() {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then(results => results.json())
@@ -19,6 +22,16 @@ class Post extends Component {
         this.setState({ data: results });
         console.log(results);
       });
+  }
+
+  //Using Axios
+  getItemDetails() {
+    axios.get("https://jsonplaceholder.typicode.com/posts").then(result => {
+      this.setState({
+        data: result.data
+      });
+      console.log(result);
+    });
   }
 
   render() {
