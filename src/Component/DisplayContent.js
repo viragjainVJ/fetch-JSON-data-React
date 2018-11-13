@@ -11,7 +11,7 @@ class DisplayContent extends Component {
 
   onClick = () => {
     this.setState({
-      show: true
+      show: !this.state.show
     });
   };
 

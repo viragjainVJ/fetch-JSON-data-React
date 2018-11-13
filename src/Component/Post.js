@@ -8,7 +8,7 @@ class Post extends Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.getItems();
   }
 
