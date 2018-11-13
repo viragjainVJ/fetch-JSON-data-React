@@ -1,7 +1,7 @@
 {
-  "name": "fetch-json-data",
+  "name": "fetch-json-data-react",
   "version": "1.0.0",
-  "description": "",
+  "description": "Using fetch and Axios to display on screen",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
